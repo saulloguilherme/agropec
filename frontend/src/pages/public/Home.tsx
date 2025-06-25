@@ -4,28 +4,51 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import "../../styles/global.css";
+import AttractionsCarousel from "./Eventos";
 
 export default function Home() {
   return (
-    <div className="hero-wrapper">
+    <div className="">
       {/* Navbar fixa sobre o carrossel */}
       <nav className="navbar">
         <div className="logo"></div>
-          <ul className="nav-links">
-            <li><a href="#evento">Evento ▼</a></li>
-            <li><a href="#expositores">Expositores ▼</a></li>
-            <li><a href="#programacao">Programação ▼</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-          </ul>
+        <ul className="nav-links">
+          <li>
+            <a href="#evento">Evento ▼</a>
+          </li>
+          <li>
+            <a href="#expositores">Expositores ▼</a>
+          </li>
+          <li>
+            <a href="#programacao">Programação ▼</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
+          </li>
+          <li>
+            <a href="#sobre">Sobre</a>
+          </li>
+        </ul>
       </nav>
 
       {/* Carrossel de fundo */}
-      <Swiper
+      <section
+        style={{
+          display: "flex",
+          width: "100%",
+          height: "100vh",
+          backgroundColor: "black",
+        }}
+      >
+            <Swiper
         loop={true}
         autoplay={{ delay: 5000 }}
         modules={[Autoplay]}
         className="mySwiper"
+        style={{
+          width: "100%",
+          
+        }}
       >
         <SwiperSlide>
           <img src="/images/rodeio.jpg" alt="Rodeio" />
@@ -43,6 +66,28 @@ export default function Home() {
           <img src="/images/boi_leilão.jpg" alt="Leilão" />
         </SwiperSlide>
       </Swiper>
+      </section>
+      <section
+      
+        className="atracoes-section"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "20px",
+          backgroundColor: "#f8f8f8",
+        }}
+      >
+        <AttractionsCarousel />
+
+      </section>
+
+      <img
+        src="/images/logo_maior.svg"
+        alt="logo pro canto"
+        className="overlay-logo"
+      />
+
     </div>
   );
 }
