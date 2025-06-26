@@ -1,26 +1,63 @@
-version: '3.8'
 services:
-  db:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: agropec_db
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-
-  backend:
+  api:
     build: .
-    ports:
-      - "3001:3001"
+    container_name: api_agropec
+    volumes:
+      - .:/app
+    working_dir: /app
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+    networks:
+      - internal
+    ports: 
+      - "3000:3000"
     environment:
-      DB_HOST: db
-      DB_USER: root
-      DB_PASSWORD: root
-      DB_NAME: agropec_db
+      DATABASE_URL: postgresql://user:password@db:5432/agropec
+      MINIO_ENDPOINT: http://minio:9000
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+      JWT_SECRET: 22446688
+    
+  db:
+    image: postgres:16
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: agropec
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d agropec"]
+      interval: 5s
+      timeout: 2s
+      retries: 10
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - internal
+    expose:
+      - 5432
+
+  minio:
+    image: minio/minio
+    container_name: minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - miniodata:/data
+    networks:
+      - internal
+    expose:
+      - 9000
+      - 9001
 
 volumes:
-  mysql_data:
+  pgdata:
+  miniodata:
+
+networks:
+  internal:
+    driver: bridge

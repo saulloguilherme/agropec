@@ -1,19 +1,15 @@
 import express from 'express';
-import { Event } from './models/Event';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import { router } from './routes/index';
 
+dotenv.config();
 const app = express();
+
+app.use(cors());
 app.use(express.json());
 
-app.post('/events', async (req, res) => {
-  const event = await Event.create(req.body);
-  res.json(event);
-});
+app.use(router);
 
-app.get('/events', async (req, res) => {
-  const events = await Event.findAll();
-  res.json(events);
-});
-
-app.listen(3001, () => {
-  console.log('Backend rodando em http://localhost:3001');
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
