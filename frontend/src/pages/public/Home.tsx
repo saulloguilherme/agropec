@@ -1,15 +1,15 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import AttractionsCarousel from "../../components/AttractionsCarousel";
+import "../../styles/home.css"
+import "../../styles/global.css";
 // @ts-ignore
 import "swiper/css";
 
-import "../../styles/global.css";
-import AttractionsCarousel from "./Eventos";
 
 export default function Home() {
   return (
-    <div className="">
-      {/* Navbar fixa sobre o carrossel */}
+    <div>
       <nav className="navbar">
         <div className="logo"></div>
         <ul className="nav-links">
@@ -31,25 +31,8 @@ export default function Home() {
         </ul>
       </nav>
 
-      {/* Carrossel de fundo */}
-      <section
-        style={{
-          display: "flex",
-          width: "100%",
-          height: "100vh",
-          backgroundColor: "black",
-        }}
-      >
-            <Swiper
-        loop={true}
-        autoplay={{ delay: 5000 }}
-        modules={[Autoplay]}
-        className="mySwiper"
-        style={{
-          width: "100%",
-          
-        }}
-      >
+      <section style={{ display: "flex", width: "100%", height: "100vh"}}>
+        <Swiper loop={true} autoplay={{ delay: 5000 }} modules={[Autoplay]} className="mySwiper" style={{width: "100%",}}>
         <SwiperSlide>
           <img src="/images/rodeio.jpg" alt="Rodeio" />
         </SwiperSlide>
@@ -67,19 +50,9 @@ export default function Home() {
         </SwiperSlide>
       </Swiper>
       </section>
-      <section
-      
-        className="atracoes-section"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          padding: "20px",
-          backgroundColor: "#f8f8f8",
-        }}
-      >
-        <AttractionsCarousel />
 
+      <section className="atracoes-section" style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "20px", backgroundColor: "#f8f8f8"}}>
+        <AttractionsCarousel />
       </section>
 
       <img
