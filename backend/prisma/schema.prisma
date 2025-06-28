@@ -12,7 +12,7 @@ datasource db {
 model Segmento {
   id      Int      @id @default(autoincrement())
   nome    String
-  eventos Evento[]
+  eventos Evento[]  //tirar
 }
 
 model Local {
@@ -30,7 +30,8 @@ model Evento {
   segmentoId   Int
   localId      Int
   data         DateTime
-  imagem       String?
+  imagem_capa  String?
+  imagem_descricao String?
   descricao    String?
   createdAt    DateTime @default(now())
 
