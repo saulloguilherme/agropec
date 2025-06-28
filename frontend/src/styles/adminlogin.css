@@ -1,0 +1,83 @@
+@import url(global.css);
+
+body {
+    overflow: hidden;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.background {
+    user-select: none;
+    z-index: -1;
+    position: absolute;
+}
+
+.container-form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+/*    margin-top: 10vh;
+    margin-right: 10vh;
+*/   
+    align-items: center;
+    background: var(--gradiente-verde);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 40vw;
+    /*height: 30vw;*/
+    /*border-radius: 20px;*/
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    padding-left: 10%;
+    height: 50%;
+    width: 90%;
+    justify-content: space-evenly;
+    padding-bottom: 10%;
+}
+
+img {
+    width: fit-content;
+    height: 50%;
+    user-select: none;
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 1em;
+    color: var(--texto-dark-mode);
+    font-weight: 600;
+}
+
+input {
+    background-color: #D9D9D9;
+    border-radius: 60px;
+    opacity: 50%;
+    height: 3em;
+    font-size: 1.05em;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+button {
+    background-color: var(--verde-secundario);
+    align-self: center;
+    width: 60%;
+    color: var(--texto-dark-mode);
+    height: 8vh;
+    border: 0;
+    border-radius: 60px;
+    font-size: 1.3em;
+    font-weight: 400;
+}

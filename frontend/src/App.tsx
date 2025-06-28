@@ -31,31 +31,11 @@ function App() {
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/contato" element={<Contato />} />
 
-        <Route path="/admin" element={<AdminLogin />} />        
-        <Route path="/admin/dashboard" element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
-        } />
-        
-        <Route path="/admin/eventos" element={
-          <PrivateRoute>
-            <EditarEventos />
-          </PrivateRoute>
-        } />
-        
-        <Route path="/admin/expositores" element={
-          <PrivateRoute>
-            <EditarExpositores />
-          </PrivateRoute>
-        } />
-        
-        <Route path="/admin/editar-home" element={
-          <PrivateRoute>
-            <EditarHome />
-          </PrivateRoute>
-        } />
-
+        <Route path='/admin' element={<AdminLogin />}/>
+        <Route path="/admin/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+        <Route path="/admin/eventos" element={<PrivateRoute><EditarEventos /></PrivateRoute>} />
+        <Route path="/admin/expositores" element={<PrivateRoute><EditarExpositores /></PrivateRoute>} />
+        <Route path="/admin/editar-home" element={<PrivateRoute><EditarHome /></PrivateRoute>} />
 
         <Route path="*" element={<Erro/>} />
       </Routes>
