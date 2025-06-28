@@ -1,13 +1,13 @@
-import "styles/Programacao.css";
+import "./styles/Programacao.css";
 
-interface Programacao {
+interface Program {
   time: string;
   title: string;
 }
 
 interface Dia {
   date: string;
-  events: Programacao[];
+  events: Program[];
 }
 
 export default function Programacao() {
@@ -40,6 +40,7 @@ export default function Programacao() {
 
   return (
     <section className="programacao-section">
+     <div className="programacao-container"> 
       <h2>Programação da Feira Agropecuária</h2>
       <div className="programacao-grid">
         {programacao.map((dia, index) => (
@@ -55,6 +56,7 @@ export default function Programacao() {
             </ul>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

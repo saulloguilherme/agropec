@@ -29,7 +29,7 @@
 body {
   background: var(--gradiente-verde);
   color: var(--texto-white-mode);
-  min-height: 100vh;
+  min-height: auto;
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
