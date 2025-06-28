@@ -5,31 +5,13 @@ import "../../styles/home.css"
 import "../../styles/global.css";
 // @ts-ignore
 import "swiper/css";
+import Navbar from "../../components/Navbar";
 
 
 export default function Home() {
   return (
     <div>
-      <nav className="navbar">
-        <div className="logo"></div>
-        <ul className="nav-links">
-          <li>
-            <a href="#evento">Evento ▼</a>
-          </li>
-          <li>
-            <a href="#expositores">Expositores ▼</a>
-          </li>
-          <li>
-            <a href="#programacao">Programação ▼</a>
-          </li>
-          <li>
-            <a href="#contato">Contato</a>
-          </li>
-          <li>
-            <a href="#sobre">Sobre</a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar/>
 
       <section style={{ display: "flex", width: "100%", height: "100vh"}}>
         <Swiper loop={true} autoplay={{ delay: 5000 }} modules={[Autoplay]} className="mySwiper" style={{width: "100%",}}>

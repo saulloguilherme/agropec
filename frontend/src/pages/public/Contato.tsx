@@ -1,7 +1,9 @@
+import Navbar from "../../components/Navbar";
+
 export default function Contato() {
   return (
     <div>
-      <p>Contato</p>
+      <Navbar/>
     </div>
   );
 }

@@ -1,7 +1,9 @@
+import Navbar from "../../components/Navbar";
+
 export default function Sobre() {
   return (
     <div>
-      <p>Sobre</p>
+      <Navbar/>
     </div>
   );
 }

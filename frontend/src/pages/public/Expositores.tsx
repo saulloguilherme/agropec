@@ -1,7 +1,9 @@
+import Navbar from "../../components/Navbar";
+
 export default function Expositores() {
   return (
     <div>
-      <p>Expositores</p>
+      <Navbar/>
     </div>
   );
 }

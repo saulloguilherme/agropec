@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/public/Home';
-import Eventos from './components/AttractionsCarousel.tsx';
+import Eventos from './pages/public/Eventos';
 import EventoDetalhe from './pages/public/EventoDetalhe';
 import Expositores from './pages/public/Expositores';
 import ExpositorDetalhe from './pages/public/ExpositorDetalhe';
