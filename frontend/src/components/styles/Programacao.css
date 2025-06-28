@@ -1,0 +1,56 @@
+.programacao-section {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.programacao-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1e4844;
+}
+
+.programacao-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.programacao-dia {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.programacao-dia h3 {
+  color: #1e4844;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.programacao-dia ul {
+  list-style: none;
+  padding: 0;
+}
+
+.programacao-dia li {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.hora {
+  font-weight: bold;
+  color: #333;
+  width: 70px;
+}
+
+.titulo {
+  flex: 1;
+  color: #555;
+}
