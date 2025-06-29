@@ -7,6 +7,7 @@ import "../../styles/global.css";
 import "swiper/css";
 import Navbar from "../../components/Navbar";
 import Programacao from "../../components/Programacao";
+
 export default function Home() {
   return (
     <div>
