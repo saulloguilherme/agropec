@@ -1,0 +1,40 @@
+.aside-adm {
+    width: 20vw;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        
+}
+
+.logo-adm {
+    align-self: center;
+    justify-self: center;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
+    height: fit-content;
+    align-self: center;
+}
+
+.list-adm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+.item-adm {
+    align-content: center;
+    margin-top: 1.5em;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.item-adm:hover {
+      color: #808080;
+}

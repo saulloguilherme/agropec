@@ -10,12 +10,10 @@ import Contato from './pages/public/Contato';
 
 import AdminLogin from './pages/admin/AdminLogin';
 import Dashboard from './pages/admin/Dashboard';
-import EditarEventos from './pages/admin/EditarEventos';
-import EditarExpositores from './pages/admin/EditarExpositores';
-import EditarHome from './pages/admin/EditarHome';
-
 import PrivateRoute from './components/PrivateRoute.tsx';
 import Erro from './pages/public/Erro';
+import EditarProgramacao from './pages/admin/EditarProgramacao.tsx';
+import EditarAtracoes from './pages/admin/EditarAtracoes.tsx';
 
 function App() {
 
@@ -33,9 +31,8 @@ function App() {
 
         <Route path='/admin' element={<AdminLogin />}/>
         <Route path="/admin/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-        <Route path="/admin/eventos" element={<PrivateRoute><EditarEventos /></PrivateRoute>} />
-        <Route path="/admin/expositores" element={<PrivateRoute><EditarExpositores /></PrivateRoute>} />
-        <Route path="/admin/editar-home" element={<PrivateRoute><EditarHome /></PrivateRoute>} />
+        <Route path="/admin/atracoes" element={<PrivateRoute><EditarAtracoes /></PrivateRoute>} />
+        <Route path="/admin/programacao" element={<PrivateRoute><EditarProgramacao /></PrivateRoute>} />
 
         <Route path="*" element={<Erro/>} />
       </Routes>
