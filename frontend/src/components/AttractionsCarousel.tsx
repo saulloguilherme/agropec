@@ -22,47 +22,50 @@ export default function AttractionsCarousel() {
   if (!images.length) return null;
 
   return (
-    <section className="atracoes-section">
-      <h2>Programação</h2>
-      <div className="carousel-container">
-          <button className="prev" onClick={() => moveSlide(-1)} aria-label="Anterior">‹</button>
-        <div
-          className="carousel-track"
-          style={{
-            display: "flex",
-            transform: `translateX(${-currentSlide * 100}%)`,
-            transition: "transform 0.4s ease",
-            width: `${images.length * 100}%`,
-          }}
-        >
-          {images.map(({ src, alt }, i) => (
-            <div
-              className="slide"
+  <section className="carousel-wrapper">
+      <section className="atracoes-section">
+        <h2>Programação</h2>
+        <div className="carousel-container">
+            <button className="prev" onClick={() => moveSlide(-1)} aria-label="Anterior">‹</button>
+          <div
+            className="carousel-track"
+            style={{
+              display: "flex",
+              transform: `translateX(${-currentSlide * 100}%)`,
+              transition: "transform 0.4s ease",
+              width: `${images.length * 100}%`,
+            }}
+          >
+            {images.map(({ src, alt }, i) => (
+              <div
+                className="slide"
+                key={i}
+            style={{ minWidth: "100%", boxSizing: "border-box" }}
+              >
+                <img
+                  src={src}
+                  alt={alt}
+                  width={300}
+                  height={300}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+            <button className="next" onClick={() => moveSlide(1)} aria-label="Próximo">›</button>
+        </div>
+        <div className="carousel-dots">
+          {images.map((_, i) => (
+            <button
               key={i}
-          style={{ minWidth: "100%", boxSizing: "border-box" }}
-            >
-              <img
-                src={src}
-                alt={alt}
-                width={300}
-                height={300}
-                loading="lazy"
-              />
-            </div>
+              className={`dot${i === currentSlide ? " active" : ""}`}
+              onClick={() => setCurrentSlide(i)}
+              aria-label={`Ir para slide ${i + 1}`}
+            />
           ))}
         </div>
-          <button className="next" onClick={() => moveSlide(1)} aria-label="Próximo">›</button>
-      </div>
-      <div className="carousel-dots">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            className={`dot${i === currentSlide ? " active" : ""}`}
-            onClick={() => setCurrentSlide(i)}
-            aria-label={`Ir para slide ${i + 1}`}
-          />
-        ))}
-      </div>
+      </section> 
     </section>
+
   );
 }
