@@ -1,13 +1,17 @@
 import { useState } from "react";
 import "./styles/AttractionsCarousel.css";
 
-export default function AttractionsCarousel() {
+type Props = {
+  attractionType: string;
+};
+
+
+export default function AttractionsCarousel({ attractionType } : Props ) {
   const images = [
-    { src: "/images/felipe_amorim.svg", alt: "Felipe Amorim" },
-    { src: "/images/marilia_tavares.svg", alt: "Marília Tavares" },
-    { src: "/images/natanzinho_lima.svg", alt: "Natanzinho Lima" },
-    { src: "/images/viviane_batidao.svg", alt: "Viviane Batidão" },
-    { src: "/images/tambor.png", alt: "Tambor" },
+    { src: "/images/felipe_amorim.svg", nome: "Felipe Amorim" },
+    { src: "/images/marilia_tavares.svg", nome: "Marília Tavares" },
+    { src: "/images/natanzinho_lima.svg", nome: "Natanzinho Lima" },
+    { src: "/images/viviane_batidao.svg", nome: "Viviane Batidão" },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,50 +26,16 @@ export default function AttractionsCarousel() {
   if (!images.length) return null;
 
   return (
-  <section className="carousel-wrapper">
       <section className="atracoes-section">
-        <h2>Programação</h2>
-        <div className="carousel-container">
-            <button className="prev" onClick={() => moveSlide(-1)} aria-label="Anterior">‹</button>
-          <div
-            className="carousel-track"
-            style={{
-              display: "flex",
-              transform: `translateX(${-currentSlide * 100}%)`,
-              transition: "transform 0.4s ease",
-              width: `${images.length * 100}%`,
-            }}
-          >
-            {images.map(({ src, alt }, i) => (
-              <div
-                className="slide"
-                key={i}
-            style={{ minWidth: "100%", boxSizing: "border-box" }}
-              >
-                <img
-                  src={src}
-                  alt={alt}
-                  width={300}
-                  height={300}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-            <button className="next" onClick={() => moveSlide(1)} aria-label="Próximo">›</button>
-        </div>
-        <div className="carousel-dots">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              className={`dot${i === currentSlide ? " active" : ""}`}
-              onClick={() => setCurrentSlide(i)}
-              aria-label={`Ir para slide ${i + 1}`}
-            />
-          ))}
+        <div className="container-atracoes">
+            <p className="attraction-type">{attractionType}</p>
+                {images.map(({ src, nome }, i) => (
+                  <div className="images" >
+                    <img src={src} loading="lazy" key={i}/>
+                    <p className="img-name">{nome}</p>
+                  </div>
+              ))}
         </div>
       </section> 
-    </section>
-
   );
 }

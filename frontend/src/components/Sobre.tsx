@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./styles/sobre.css";
+import "./styles/Sobre.css";
 
 export default function Sobre() {
   return (

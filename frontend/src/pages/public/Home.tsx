@@ -34,15 +34,11 @@ export default function Home() {
         </Swiper>
       </section>
 
-      <section className="atracoes-section" style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "20px", backgroundColor: "#f8f8f8",}}>
-        <AttractionsCarousel />
-      </section>
+      <AttractionsCarousel attractionType="Shows"></AttractionsCarousel>
+
+      <Programacao />
 
       <img src="/images/logo_maior.svg" className="overlay-logo"/>
-
-      <section>
-        <Programacao />
-      </section>
       
       <section>
         <Footer />

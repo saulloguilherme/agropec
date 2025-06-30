@@ -1,89 +1,49 @@
+@import url(../../styles/global.css);
+
 
 .atracoes-section {
-  max-width: 400px;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 40px 20px;
-  text-align: center;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  padding-bottom: 5vh;
 }
 
-section.atracoes-section {
-  padding: 0;
-}
-
-.carousel-container {
-  position: relative;
-  overflow: hidden;
+.container-atracoes {
+  color: var(--texto-dark-mode);
+  background-color: var(--verde-secundaria);
+  margin-left: 5%;
+  margin-top: 5vh;
   width: 100%;
-  border-radius: 12px;
-}
-
-.carousel-track {
-  /* display, transform e transition agora são inline no JSX */
-}
-
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.slide img {
+  height: 100%;
+  background-color: var(--verde-secundario);
+  border-radius: 20px;
+  height: 100%;
   width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 12px;
-  
+  display: flex;
+  direction: row;
 }
 
+.attraction-type {
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 32px;
+  font-weight: 700;
+}
 
-.prev,
-.next {
+.images {
+  margin-top: 10%;
+  margin-left: 5vw;
+  display: flex;
+  height: 100%;
+}
+
+img {
+  display: block;
+  width: 30%;
+}
+
+.img-name {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(30, 30, 30, 0.6);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 8px 16px;
-  cursor: pointer;
-  z-index: 1;
 }
 
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.prev,
-.next {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.atracoes-section {
-  background: white;
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-.atracoes-section {
-  background: transparent; /* ou remova completamente */
-  
-}
-button.dot{
-  width: 12px;
-  height: 12px; 
-  background-color: #ccc;
-  
-}
