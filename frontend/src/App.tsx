@@ -14,6 +14,7 @@ import PrivateRoute from './components/PrivateRoute.tsx';
 import Erro from './pages/public/Erro';
 import EditarProgramacao from './pages/admin/EditarProgramacao.tsx';
 import EditarAtracoes from './pages/admin/EditarAtracoes.tsx';
+import Mapa from './pages/public/Mapa.tsx';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/expositores" element={<Expositores />} />
         <Route path="/expositores/:id" element={<ExpositorDetalhe />} />
         <Route path="/programacao" element={<Programacao />} />
+        <Route path="/mapa" element={<Mapa />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/contato" element={<Contato />} />
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./styles/contato.css";
+import "./styles/Contato.css";
 
 export default function Contato() {
   return (
