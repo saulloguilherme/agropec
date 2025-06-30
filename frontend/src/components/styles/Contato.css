@@ -123,13 +123,17 @@
 @media (max-width: 768px) {
   .contato-box {
     flex-direction: column;
+    height: 80%;
   }
 
   .contato-titulo h1 {
     font-size: 2rem;
+    margin-top: 300px;
   }
 
   .contato-titulo p {
     font-size: 1rem;
+    margin-left: 0px;
   }
+
 }

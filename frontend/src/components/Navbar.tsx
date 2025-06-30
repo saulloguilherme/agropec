@@ -1,29 +1,42 @@
 import "./styles/Navbar.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
-    return (
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
     <nav className="navbar">
-        <Link to="/">
-            <div className="logo"></div>
-        </Link>
-        <ul className="nav-links">
-          <li>
-            <Link className="link" to="/eventos">Evento ▼</Link>
-          </li>
-          <li>
-            <Link className="link" to="/expositores">Expositores ▼</Link>
-          </li>
-          <li>
-            <Link className="link" to="/programacao">Programação ▼</Link>
-          </li>
-          <li>
-            <Link className="link" to="/contato">Contato</Link>
-          </li>
-          <li>
-            <Link className="link" to="/sobre">Sobre</Link>
-          </li>
-        </ul>
+      <Link to="/">
+        <div className="logo"></div>
+      </Link>
+
+      <button
+        className="menu-icon"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Abrir ou fechar menu"
+      >
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <li>
+          <Link className="link" to="/eventos" onClick={() => setMenuOpen(false)}>Evento ▼</Link>
+        </li>
+        <li>
+          <Link className="link" to="/expositores" onClick={() => setMenuOpen(false)}>Expositores ▼</Link>
+        </li>
+        <li>
+          <Link className="link" to="/programacao" onClick={() => setMenuOpen(false)}>Programação ▼</Link>
+        </li>
+        <li>
+          <Link className="link" to="/contato" onClick={() => setMenuOpen(false)}>Contato</Link>
+        </li>
+        <li>
+          <Link className="link" to="/sobre" onClick={() => setMenuOpen(false)}>Sobre</Link>
+        </li>
+      </ul>
     </nav>
-    )
+  );
 }

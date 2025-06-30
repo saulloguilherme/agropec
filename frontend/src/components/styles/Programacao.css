@@ -68,3 +68,57 @@ div.programacao-container {
   margin-top: 40px;
 }
 
+@media (max-width: 768px) {
+  .programacao-section {
+    margin-top: 20px;
+    padding: 30px 15px;
+    height: auto;
+  }
+
+  .programacao-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .programacao-grid {
+    grid-template-columns: 1fr; /* uma coluna apenas */
+    gap: 16px;
+  }
+
+  .programacao-dia {
+    padding: 16px;
+  }
+
+  .programacao-dia h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .programacao-dia li {
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 0;
+  }
+
+  .hora {
+    width: auto;
+    font-size: 0.9rem;
+    color: #444;
+  }
+
+  .titulo {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  section.programacao-section {
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  div.programacao-container {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+}
+

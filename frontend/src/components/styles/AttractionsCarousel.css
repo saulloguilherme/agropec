@@ -1,14 +1,20 @@
 
+
 .atracoes-section {
-  max-width: 400px;
-  margin: 0 auto;
-  margin-top: 20px;
+  max-width: 900px;
+  margin: 80px auto 40px auto;
   padding: 40px 20px;
   text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: montserrat, sans-serif;  
 }
 
-section.atracoes-section {
-  padding: 0;
+.atracoes-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #618947;
 }
 
 .carousel-container {
@@ -19,71 +25,252 @@ section.atracoes-section {
 }
 
 .carousel-track {
-  /* display, transform e transition agora são inline no JSX */
+  display: flex;
+  transition: transform 0.4s ease;
+  width: 100%;
 }
 
 .slide {
   min-width: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 
 .slide img {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
-  border-radius: 12px;
-  
+  border-radius: 12px 12px 0 0;
+  display: block;
 }
 
+.legenda-container {
+  padding: 16px;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  text-align: left;
+}
+
+.legenda {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.data-show {
+  display: block;
+  margin-top: 4px;
+  font-size: 1rem;
+  color: #7da548;
+  font-weight: 500;
+}
+
+.descricao-show {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
 
 .prev,
 .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(30, 30, 30, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   font-size: 2rem;
-  padding: 8px 16px;
+  padding: 10px 16px;
+  border-radius:100%;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+  width:50px;
+  height: 65px;
 }
 
 .prev {
-  left: 10px;
+  left: 12px; /* canto esquerdo */
 }
 
 .next {
-  right: 10px;
-}
-
-.prev,
-.next {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  right: 12px; /* canto direito */
 }
 
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+}
 
-.atracoes-section {
-  background: white;
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 8px;
 }
-.atracoes-section {
-  background: transparent; /* ou remova completamente */
-  
-}
-button.dot{
+
+button.dot {
   width: 12px;
-  height: 12px; 
+  height: 12px;
   background-color: #ccc;
-  
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.dot.active,
+button.dot:hover {
+  background-color: #7da548;
+}
+
+@media (max-width: 768px) {
+  .atracoes-section {
+    padding: 20px 10px;
+    margin: 20px 10px;
+  }
+
+  .atracoes-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .slide img {
+    height: 200px;
+  }
+
+  .legenda {
+    font-size: 1rem;
+  }
+
+  .data-show {
+    font-size: 0.85rem;
+  }
+
+  .descricao-show {
+    font-size: 0.8rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    width: 40px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .atracoes-section {
+    padding: 15px 8px;
+    margin: 15px 8px;
+  }
+
+  .atracoes-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .slide img {
+    height: 150px;
+  }
+
+  .legenda {
+    font-size: 0.9rem;
+  }
+
+  .data-show {
+    font-size: 0.8rem;
+  }
+
+  .descricao-show {
+    font-size: 0.75rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    width: 35px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .atracoes-section {
+    padding: 20px 10px;
+    margin: 20px 10px;
+  }
+
+  .atracoes-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .slide img {
+    height: 200px;
+  }
+
+  .legenda {
+    font-size: 1rem;
+  }
+
+  .data-show {
+    font-size: 0.85rem;
+  }
+
+  .descricao-show {
+    font-size: 0.8rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    width: 40px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .atracoes-section {
+    padding: 15px 8px;
+    margin: 15px 8px;
+  }
+
+  .atracoes-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .slide img {
+    height: 150px;
+  }
+
+  .legenda {
+    font-size: 0.9rem;
+  }
+
+  .data-show {
+    font-size: 0.8rem;
+  }
+
+  .descricao-show {
+    font-size: 0.75rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.2rem;
+    padding: 6px 10px;
+    width: 35px;
+    height: 45px;
+  }
 }
