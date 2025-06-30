@@ -7,6 +7,7 @@ import "../../styles/global.css";
 import "swiper/css";
 import Navbar from "../../components/Navbar";
 import Programacao from "../../components/Programacao";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -41,6 +42,10 @@ export default function Home() {
 
       <section>
         <Programacao />
+      </section>
+      
+      <section>
+        <Footer />
       </section>
 
     </div>
