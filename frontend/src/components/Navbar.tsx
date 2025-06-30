@@ -9,13 +9,16 @@ export default function Navbar() {
         </Link>
         <ul className="nav-links">
           <li>
-            <Link className="link" to="/eventos">Evento ▼</Link>
+            <Link className="link" to="/eventos">Eventos ▼</Link>
           </li>
           <li>
             <Link className="link" to="/expositores">Expositores ▼</Link>
           </li>
           <li>
             <Link className="link" to="/programacao">Programação ▼</Link>
+          </li>
+          <li>
+            <Link className="link" to="/mapa">Mapa</Link>
           </li>
           <li>
             <Link className="link" to="/contato">Contato</Link>

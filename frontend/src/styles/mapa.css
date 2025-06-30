@@ -1,0 +1,35 @@
+.map-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.event-map {
+    padding-top: 10vh;
+    width: 100%;
+    height: 100%;
+}
+
+#svgMap .Animais:hover,
+#svgMap .Central:hover,
+#svgMap .AreaInicio:hover,
+#svgMap .B1:hover,
+#svgMap .B2:hover,
+#svgMap .B3:hover,
+#svgMap .B4:hover,
+#svgMap .B5:hover,
+#svgMap .B6:hover,
+#svgMap .B7:hover,
+#svgMap .B8:hover,
+#svgMap .B9:hover,
+#svgMap .B10:hover,
+#svgMap .B11:hover,
+#svgMap .B12:hover,
+#svgMap .B13:hover,
+#svgMap .Show:hover,
+#svgMap .Parque:hover,
+#svgMap .Panela:hover {
+  filter: drop-shadow(0 0 8px #0008);
+  transform: scale(1.08);
+  transition: transform 0.2s, filter 0.2s;
+  cursor: pointer;
+}
