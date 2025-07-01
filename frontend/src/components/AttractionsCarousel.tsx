@@ -4,13 +4,13 @@ import "./styles/AttractionsCarousel.css";
 export default function AttractionsCarousel() {
   const images = [
     {
-      src: "/images/felipe_amorim.svg",
+      src: "/images/felipe_amorim.png",
       alt: "Felipe Amorim",
       data: "22h",
       descricao: "Grandes sucessos do piseiro."
     },
     {
-      src: "/images/marilia_tavares.svg",
+      src: "/images/marilia_tavares.png",
       alt: "Marília Tavares",
       data: "20h",
       descricao: "Forró e arrocha para todos."
@@ -22,7 +22,7 @@ export default function AttractionsCarousel() {
       descricao: "Hits para animar a noite."
     },
     {
-      src: "/images/viviane_batidao.svg",
+      src: "/images/viviane_batidao.png",
       alt: "Viviane Batidão",
       data: "21h",
       descricao: "A rainha do batidão."
