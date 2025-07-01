@@ -8,7 +8,6 @@ import "swiper/css";
 import Navbar from "../../components/Navbar";
 import Programacao from "../../components/Programacao";
 import Footer from "../../components/Footer";
-import Mapa from "./Mapa";
 
 export default function Home() {
   return (
@@ -35,7 +34,7 @@ export default function Home() {
         </Swiper>
       </section>
 
-      <AttractionsCarousel attractionType="Shows"></AttractionsCarousel>
+      <AttractionsCarousel></AttractionsCarousel>
 
       <Programacao />
 

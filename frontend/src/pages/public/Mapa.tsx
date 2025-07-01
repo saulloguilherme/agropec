@@ -120,6 +120,7 @@ export default function Mapa() {
           </div>
         )}
       </section>
+      <Footer></Footer>
     </div>
   );
 }

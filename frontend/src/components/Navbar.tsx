@@ -22,7 +22,7 @@ export default function Navbar() {
 
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <Link className="link" to="/expositores" onClick={() => setMenuOpen(false)}>Mapa Interativo</Link>
+          <Link className="link" to="/mapa" onClick={() => setMenuOpen(false)}>Mapa Interativo</Link>
         </li>
         <li>
           <Link className="link" to="/programacao" onClick={() => setMenuOpen(false)}>Programação </Link>
