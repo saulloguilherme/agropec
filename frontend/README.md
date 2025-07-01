@@ -1,54 +1,102 @@
-# React + TypeScript + Vite
+# Agropec 2025 - Portal Oficial
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do **Portal da Agropec 2025**, o site oficial da maior feira agropecuária do Pará! Este projeto foi desenvolvido com foco em performance, experiência do usuário e facilidade de administração de conteúdo.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Visão Geral
 
-## Expanding the ESLint configuration
+O portal oferece informações completas sobre a feira, programação de eventos, atrações, expositores, mapa interativo do local, além de um painel administrativo para gerenciamento de dados.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React + TypeScript + Vite
+- **Estilo:** CSS modularizado, responsivo e moderno
+- **Administração:** Painel protegido para edição de atrações e programação
+- **Experiência:** Animações, carrosséis, navegação fluida e design mobile-first
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🚀 Funcionalidades
+
+- **Página Inicial:** Destaques, carrossel de imagens e atrações principais.
+- **Programação:** Visualização da agenda de eventos por dia e horário.
+- **Mapa Interativo:** Explore o local da feira com informações dinâmicas dos espaços.
+- **Sobre:** Informações institucionais, missão, visão, valores e expositores parceiros.
+- **Contato:** Formulário para dúvidas, sugestões e parcerias.
+- **Painel Admin:** Login seguro, dashboard, edição de atrações e programação.
+
+---
+
+## 📁 Estrutura de Pastas
+
+```
+frontend/
+│
+├── public/
+│   ├── images/         # Logos, fotos de atrações, expositores, etc.
+│   └── map/            # SVG do mapa da feira
+│
+├── src/
+│   ├── components/     # Componentes reutilizáveis (Navbar, Footer, Carrossel, etc.)
+│   ├── pages/          # Páginas públicas e administrativas
+│   ├── styles/         # CSS modularizado
+│   └── App.tsx         # Roteamento principal
+│
+├── index.html
+├── package.json
+└── ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tecnologias Utilizadas
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Framer Motion](https://www.framer.com/motion/) (animações)
+- [Swiper](https://swiperjs.com/) (carrossel)
+- [React Router DOM](https://reactrouter.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- CSS puro e modularizado
+
+---
+
+## ⚡ Como Rodar Localmente
+
+1. **Clone o repositório:**
+   ```sh
+   git clone https://github.com/seu-usuario/agropec2025.git
+   cd agropec2025/frontend
+   ```
+
+2. **Instale as dependências:**
+   ```sh
+   npm install
+   ```
+
+3. **Inicie o servidor de desenvolvimento:**
+   ```sh
+   npm run dev
+   ```
+
+4. **Acesse:**  
+   Abra [http://localhost:5173](http://localhost:5173) no navegador.
+
+---
+
+## 🔒 Painel Administrativo
+
+- Acesse `/admin` para login.
+- Após autenticação, gerencie atrações e programação pelo dashboard.
+- Rotas protegidas por Autenticação.
+
+---
+
+## 📦 Scripts Disponíveis
+
+- `npm run dev` — Inicia o servidor de desenvolvimento.
+- `npm run build` — Gera build de produção.
+
+---
+
+Feito com 💚 para a Agropec 2025.
