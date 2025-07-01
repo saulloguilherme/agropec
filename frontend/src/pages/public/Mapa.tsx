@@ -63,52 +63,63 @@ export default function Mapa() {
     <div>
       <Navbar />
       <section className="map-container">
-  <div className="map-flex">
-    <object
-      id="svgMap"
-      type="image/svg+xml"
-      data="/map/map.svg"
-      className="event-map"
-      ref={svgRef}
-    ></object>
+        <div className="map-flex">
+          <object
+            id="svgMap"
+            type="image/svg+xml"
+            data="/map/map.svg"
+            className="event-map"
+            ref={svgRef}
+          ></object>
 
-    <div className="map-legend">
-      <h2>Manual das Zonas</h2>
-      <ul>
-        <li><strong>Animais</strong>: Área de exposição de animais.</li>
-        <li><strong>Central</strong>: Centro administrativo/informações.</li>
-        <li><strong>Área Início</strong>: Entrada principal.</li>
-        <li><strong>B1–B13</strong>: Estandes comerciais.</li>
-        <li><strong>Show</strong>: Arena de shows e apresentações.</li>
-        <li><strong>Parque</strong>: Espaço de lazer e diversão.</li>
-        <li><strong>Panela</strong>: Praça de alimentação.</li>
-      </ul>
+          <div className="map-legend">
+            <h2>Manual das Zonas</h2>
+            <ul>
+              <li>
+                <strong>Animais</strong>: Área de exposição de animais.
+              </li>
+              <li>
+                <strong>Central</strong>: Centro administrativo/informações.
+              </li>
+              <li>
+                <strong>Área Início</strong>: Entrada principal.
+              </li>
+              <li>
+                <strong>B1–B13</strong>: Estandes comerciais.
+              </li>
+              <li>
+                <strong>Show</strong>: Arena de shows e apresentações.
+              </li>
+              <li>
+                <strong>Parque</strong>: Espaço de lazer e diversão.
+              </li>
+              <li>
+                <strong>Panela</strong>: Praça de alimentação.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {tooltip && (
+          <div
+            style={{
+              position: "fixed",
+              left: tooltip.x + 10,
+              top: tooltip.y + 10,
+              background: "#222",
+              color: "#fff",
+              padding: "0.5em 1em",
+              borderRadius: "8px",
+              pointerEvents: "none",
+              zIndex: 1000,
+              fontSize: "1em",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {tooltip.text}
+          </div>
+        )}
+      </section>
     </div>
-  </div>
-
-  {tooltip && (
-    <div
-      style={{
-        position: "fixed",
-        left: tooltip.x + 10,
-        top: tooltip.y + 10,
-        background: "#222",
-        color: "#fff",
-        padding: "0.5em 1em",
-        borderRadius: "8px",
-        pointerEvents: "none",
-        zIndex: 1000,
-        fontSize: "1em",
-        whiteSpace: "nowrap",
-      }}
-    >
-      {tooltip.text}
-    </div>
-  )}
-</section>
-
-    </div>
-
-    
   );
 }
