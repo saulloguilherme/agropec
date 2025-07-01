@@ -51,3 +51,30 @@ enum TipoEvento {
   ATRACAO
   EXPOSICAO
 }
+
+
+model Evento {
+  id        Int      @id @default(autoincrement())
+  titulo    String
+  descricao String
+  data      DateTime
+  local     String
+}
+
+
+model ProgramacaoDia {
+  id        Int           @id @default(autoincrement())
+  data      String        
+  eventos   Evento[]
+}
+
+
+model Evento {
+  id              Int              @id @default(autoincrement())
+  horario         String          
+  titulo          String
+  programacaoDia  ProgramacaoDia  @relation(fields: [programacaoDiaId], references: [id])
+  programacaoDiaId Int
+}
+
+

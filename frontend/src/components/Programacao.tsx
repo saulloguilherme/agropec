@@ -1,5 +1,7 @@
 import "./styles/Programacao.css";
 
+
+
 interface Program {
   time: string;
   title: string;
@@ -39,7 +41,7 @@ export default function Programacao() {
   ];
 
   return (
-    <section className="programacao-section">
+  <section className="programacao-section">
      <div className="programacao-container"> 
       <h2>Programação da Feira Agropecuária</h2>
       <div className="programacao-grid">
