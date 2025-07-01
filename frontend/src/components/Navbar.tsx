@@ -22,13 +22,10 @@ export default function Navbar() {
 
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <Link className="link" to="/eventos" onClick={() => setMenuOpen(false)}>Evento ▼</Link>
+          <Link className="link" to="/mapa" onClick={() => setMenuOpen(false)}>Mapa</Link>
         </li>
         <li>
-          <Link className="link" to="/expositores" onClick={() => setMenuOpen(false)}>Expositores ▼</Link>
-        </li>
-        <li>
-          <Link className="link" to="/programacao" onClick={() => setMenuOpen(false)}>Programação ▼</Link>
+          <Link className="link" to="/programacao" onClick={() => setMenuOpen(false)}>Programação</Link>
         </li>
         <li>
           <Link className="link" to="/contato" onClick={() => setMenuOpen(false)}>Contato</Link>

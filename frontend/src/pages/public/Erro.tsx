@@ -1,7 +1,9 @@
+import Navbar from "../../components/Navbar";
+
 export default function Erro() {
   return (
     <div>
-      <p>Erro</p>
+      <Navbar></Navbar>
     </div>
   );
 }
